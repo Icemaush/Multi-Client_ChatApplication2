@@ -25,3 +25,10 @@ Client functionality includes:
 - Send whispers to specific users  
 - Call emote methods from server via RMI  
 - Display connected users  
+
+![alt text](/Screenshots/ClientGUI.png)
+![alt text](/Screenshots/ClientUserDisconnected.png)
+![alt text](/Screenshots/MulitpleClientsConnected.png)
+![alt text](/Screenshots/ServerAllUsersDisconnected.png)
+![alt text](/Screenshots/ServerGUI.png)
+![alt text](/Screenshots/ServerMultipleClientsConnected.png)
