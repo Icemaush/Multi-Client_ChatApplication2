@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="489.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.ServerController">
+   <children>
+      <TextField fx:id="textIP" layoutX="61.0" layoutY="43.0" prefHeight="25.0" prefWidth="105.0" />
+      <TextField fx:id="textPort" layoutX="61.0" layoutY="78.0" prefHeight="25.0" prefWidth="105.0" promptText="Enter port" />
+      <TextField fx:id="textUsername" layoutX="98.0" layoutY="199.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter username" />
+      <PasswordField fx:id="pwdPassword" layoutX="98.0" layoutY="233.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter password" />
+      <TextField fx:id="textMessage" alignment="TOP_LEFT" layoutX="21.0" layoutY="429.0" prefHeight="12.0" prefWidth="185.0" promptText="Enter message">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="14.0" layoutY="15.0" opacity="0.5" text="Server">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane hbarPolicy="NEVER" layoutX="288.0" layoutY="23.0" prefHeight="451.0" prefWidth="404.0">
+         <content>
+            <TextArea fx:id="textareaChat" editable="false" focusTraversable="false" prefHeight="449.0" prefWidth="402.0" />
+         </content>
+      </ScrollPane>
+      <Separator layoutX="13.0" layoutY="140.0" prefHeight="12.0" prefWidth="246.0" />
+      <Button fx:id="btnStartServer" focusTraversable="false" layoutX="182.0" layoutY="40.0" mnemonicParsing="false" onAction="#btnStart_OnClick" prefHeight="25.0" prefWidth="75.0" text="Start">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnStopServer" focusTraversable="false" layoutX="182.0" layoutY="75.0" mnemonicParsing="false" onAction="#btnStop_OnClick" prefHeight="12.0" prefWidth="75.0" text="Stop">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="22.0" layoutY="116.0" text="Status:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblServerStatus" layoutX="70.0" layoutY="113.0" prefHeight="27.0" prefWidth="75.0" text="OFFLINE" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="75.0" layoutY="22.0" prefHeight="12.0" prefWidth="185.0" />
+      <Separator layoutX="63.0" layoutY="174.0" prefHeight="12.0" prefWidth="200.0" />
+      <Separator layoutX="17.0" layoutY="365.0" prefHeight="12.0" prefWidth="246.0" />
+      <Label layoutX="17.0" layoutY="167.0" opacity="0.5" text="User">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="201.0" text="Username:" textAlignment="RIGHT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="233.0" prefHeight="25.0" prefWidth="84.0" text="Password:" textAlignment="RIGHT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAddUser" focusTraversable="false" layoutX="31.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnAddUser_OnClick" prefHeight="30.0" prefWidth="105.0" text="Add User">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRemoveUser" focusTraversable="false" layoutX="155.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnRemoveUser_OnClick" prefHeight="30.0" prefWidth="105.0" text="Remove User">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnServerStart111" focusTraversable="false" layoutX="154.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnDisplayUsers_OnClick" prefHeight="30.0" prefWidth="105.0" text="Display Users">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnResetPassword" focusTraversable="false" layoutX="32.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnResetPassword_OnClick" prefHeight="30.0" prefWidth="105.0" text="Reset Password" />
+      <Label layoutX="17.0" layoutY="397.0" opacity="0.5" text="Message">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="95.0" layoutY="404.0" prefHeight="12.0" prefWidth="168.0" />
+      <Button fx:id="btnSend" defaultButton="true" focusTraversable="false" layoutX="208.0" layoutY="429.0" mnemonicParsing="false" onAction="#btnSend_OnClick" prefHeight="25.0" prefWidth="57.0" text="Send">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="37.0" layoutY="45.0" text="IP:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="80.0" text="Port:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="705.0" layoutY="24.0" text="Connected Users:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listviewConnectedUsers" layoutX="705.0" layoutY="50.0" prefHeight="423.0" prefWidth="200.0" />
+      <Label fx:id="lblNumUsers" layoutX="822.0" layoutY="24.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
