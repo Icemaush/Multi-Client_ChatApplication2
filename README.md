@@ -27,8 +27,8 @@ Client functionality includes:
 - Display connected users  
 
 ![alt text](/Screenshots/ClientGUI.png)
-![alt text](/Screenshots/ClientUserDisconnected.png)
 ![alt text](/Screenshots/MultipleClientsConnected.png)
-![alt text](/Screenshots/ServerAllUsersDisconnected.png)
+![alt text](/Screenshots/ClientUserDisconnected.png)
 ![alt text](/Screenshots/ServerGUI.png)
 ![alt text](/Screenshots/ServerMultipleClientsConnected.png)
+![alt text](/Screenshots/ServerAllUsersDisconnected.png)
