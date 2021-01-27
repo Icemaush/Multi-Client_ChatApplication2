@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="631.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ClientController">
+   <children>
+      <TextField fx:id="textUsername" layoutX="608.0" layoutY="31.0" prefHeight="25.0" prefWidth="185.0" promptText="Enter username" />
+      <PasswordField fx:id="pwdPassword" layoutX="608.0" layoutY="83.0" prefHeight="17.0" prefWidth="185.0" promptText="Enter password" />
+      <TextField fx:id="textServerAddress" layoutX="608.0" layoutY="137.0" prefHeight="25.0" prefWidth="185.0" promptText="Enter server address" />
+      <TextField fx:id="textMessage" alignment="TOP_LEFT" layoutX="14.0" layoutY="546.0" prefHeight="63.0" prefWidth="473.0" promptText="Type message...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="611.0" layoutY="236.0" text="Users">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSend" defaultButton="true" layoutX="499.0" layoutY="546.0" mnemonicParsing="false" onAction="#btnSend_OnClick" prefHeight="63.0" prefWidth="98.0" text="Send">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLeave" layoutX="695.0" layoutY="570.0" mnemonicParsing="false" onAction="#btnLeave_OnClick" prefHeight="27.0" prefWidth="98.0" text="Leave">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="608.0" layoutY="14.0" text="Username" />
+      <Label layoutX="608.0" layoutY="66.0" text="Password" />
+      <Label layoutX="608.0" layoutY="120.0" text="Server Address (IP:PORT)" />
+      <ScrollPane focusTraversable="false" hbarPolicy="NEVER" layoutX="14.0" layoutY="14.0" prefHeight="519.0" prefWidth="577.0">
+         <content>
+            <TextArea fx:id="textareaChat" editable="false" prefHeight="517.0" prefWidth="575.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+         </content>
+      </ScrollPane>
+      <ListView fx:id="listviewUsers" layoutX="608.0" layoutY="268.0" prefHeight="265.0" prefWidth="185.0" />
+      <Button fx:id="btnConnect" layoutX="652.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnConnect_OnClick" prefHeight="39.0" prefWidth="98.0" text="Connect">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
